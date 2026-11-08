@@ -1,0 +1,18 @@
+{
+  "$schema": "https://itzg.github.io/mc-image-helper/schemas/patch-definitions.json",
+  "file": "/data/config/paper-world-defaults.yml",
+  "ops": [
+    {
+      "$set": {
+        "path": "$.collisions.allow-player-cramming-damage",
+        "value": true
+      }
+    },
+    {
+      "$set": {
+        "path": "$.collisions.max-entity-collisions",
+        "value": 2147483647
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+services:
+  playit:
+    container_name: "mc-server-agent"
+    image: ghcr.io/playit-cloud/playit-agent:latest
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      SECRET_KEY: "${PLAYIT_SECRET_KEY}"
+
+  mc-server:
+    container_name: "paper-server"
+    image: itzg/minecraft-server:latest
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    ports:
+      # Java port
+      - "25565:25565"
+      # Bedrock ports
+      - "19132:19132/tcp"
+      - "19132:19132/udp"
+
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "26.3"
+      MEMORY: "6144M"
+      MOTD: "§l%TYPE%§r Server For §l§2§l§nMC %VERSION%§2§l§7§l§r
+
+        §x§C§0§6§1§C§BD§x§C§0§5§F§B§Do§x§C§1§5§D§A§En§x§C§1§5§B§A§0'§x§C§2§5§9§\
+        9§1t §x§C§2§5§7§8§3b§x§C§3§5§5§7§4e §x§C§3§5§4§6§6a
+        §x§C§3§5§2§5§7d§x§C§4§5§0§4§9o§x§C§4§4§E§3§Ao§x§C§5§4§C§2§Cf§x§C§5§4§A§\
+        1§Du§x§C§6§4§8§0§Fs§x§C§6§4§6§0§0!§r"
+      USE_MEOWICE_FLAGS: "true"
+      DIFFICULTY: "3" # Hard
+      SPAWN_PROTECTION: "0"
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "true"
+      SERVER_NAME: "MC With Fellas"
+      ICON: "/extras/icon.png"
+      PATCH_DEFINITIONS: "/extras/patch-files"
+      # Replacement env variables
+      REPLACE_ENV_VARIABLES: "TRUE"
+      ENV_VARIABLE_PREFIX: "CFG_"
+      CFG_NXS_TOKEN: "${NXS_TOKEN}"
+      CFG_ADVERTISE_ADDRESS: "${GEYSER_ADVERTISE_ADDRESS}"
+
+    volumes:
+      - "./server:/data" # The actual server data
+      - "./plugins:/plugins" # Plugins; copied into /data/plugins on start
+      - "./extras:/extras" # Directory for extra stuff
