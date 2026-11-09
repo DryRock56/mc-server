@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ImageFrame - Server Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="inner">
+  <a class="brand" href="index.html">Server Guide</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="geyser.html">Geyser</a>
+    <a href="floodgate.html">Floodgate</a>
+    <a href="armorstandeditor.html">ArmorStandEditor</a>
+    <a href="imageframe.html" aria-current="page">ImageFrame</a>
+    <a href="mollefreecam.html">MolleFreeCam</a>
+    <a href="chunky.html">Chunky</a>
+    <a href="backuper.html">Backuper</a>
+    <a href="bedrock-servers.html">Bedrock &amp; other servers</a>
+  </nav>
+</div></header>
+<main>
+  <h1>ImageFrame</h1>
+  <p class="lead">Turn a picture from the internet into a map you can hang on a wall.</p>
+
+  <h2>What it does</h2>
+  <p>ImageFrame converts an image or GIF into Minecraft maps. You can then place those maps in item frames to build a poster or mural. Images can be sized across several maps.</p>
+
+  <div class="warn">
+    <strong>Permissions:</strong> creating images/animations is likely limited by default. If a command says you don't have permission, ping me and I'll fix it. I plan on setting up the defaults so everyone can do it, but as of writing that is not done.
+  </div>
+
+  <h2>Quick start</h2>
+  <ol>
+    <li>Find a direct link to an image (a URL that ends in <code>.png</code> or <code>.jpg</code> works best).</li>
+    <li>Place item frames on a wall in the size of picture you want, for example 3 wide by 2 tall.</li>
+    <li>Get as many empty maps as you need to fill the desired grid.</li>
+    <li>Select the frames: <code>/imageframe select</code> and follow the prompt.</li>
+    <li>Create the image: <code>/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt;</code>. Use the same width and height as your frame grid, e.g. <code>/imageframe create sunset https://example.com/sunset.png 3 2</code></li>
+  </ol>
+  <p>You can also add <code>selection</code> to put the image directly into the frames you selected, or <code>combined</code> to get one item that places the whole image in one click.</p>
+
+  <div class="warn">
+    <strong>Performance:</strong> I have not tested the performance implications of this plugin, but it's likely that too
+    many can cause lag (especially GIFs). Please make images in moderation.
+  </div>
+
+  <h2>Useful commands</h2>
+  <table>
+    <tr><th>Command</th><th>What it does</th></tr>
+    <tr><td><code>/imageframe select</code></td><td>Select item frames to put images on</td></tr>
+    <tr><td><code>/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt;</code></td><td>Create a new image map</td></tr>
+    <tr><td><code>/imageframe list</code></td><td>List the image maps you've made</td></tr>
+    <tr><td><code>/imageframe get &lt;name&gt;</code></td><td>Get a copy of an image map you made</td></tr>
+    <tr><td><code>/imageframe info</code></td><td>Show details about the map in your hand</td></tr>
+    <tr><td><code>/imageframe refresh</code></td><td>Reload an image from its original link</td></tr>
+    <tr><td><code>/imageframe rename &lt;name&gt; &lt;new_name&gt;</code></td><td>Rename an image</td></tr>
+    <tr><td><code>/imageframe delete &lt;name&gt;</code></td><td>Delete an image map you made</td></tr>
+  </table>
+  <p>Tip: <code>/imageframe</code> can also be typed as <code>/if</code>.</p>
+
+  <h2>Good to know</h2>
+  <ul>
+    <li>Keep image content appropriate; the server rules apply to pictures too.</li>
+    <li>Maps display at a limited resolution and color range, so simple, high-contrast images look best.</li>
+    <li>Bedrock players may experience some visual glitches/artifacts with GIFs.</li>
+    <li>Chat messages have a character limit, so some long image links may not work. Use <a href="https://tinyurl.com">TinyURL</a> to shorten links if necessary.</li>
+  </ul>
+
+  <div class="warn">
+    Please don't make images that are inappropriate or offensive, and <em>DEFINITELY</em> don't make anything sexually explicit. Keep your gooning material on a different tab, you weirdo.
+  </div>
+  <p>Full command list: <a href="https://hangar.papermc.io/LOOHP/ImageFrame">ImageFrame on Hangar</a></p>
+</main>
+<footer>Last updated November 2026.</footer>
+</body>
+</html>

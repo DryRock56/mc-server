@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bedrock and Other Servers - Server Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site"><div class="inner">
+  <a class="brand" href="index.html">Server Guide</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="geyser.html">Geyser</a>
+    <a href="floodgate.html">Floodgate</a>
+    <a href="armorstandeditor.html">ArmorStandEditor</a>
+    <a href="imageframe.html">ImageFrame</a>
+    <a href="mollefreecam.html">MolleFreeCam</a>
+    <a href="chunky.html">Chunky</a>
+    <a href="backuper.html">Backuper</a>
+    <a href="bedrock-servers.html" aria-current="page">Bedrock &amp; other servers</a>
+  </nav>
+</div></header>
+<main>
+  <h1>Joining other servers from Bedrock</h1>
+  <p class="lead">How Bedrock players can connect to third-party servers, depending on the device you play on.</p>
+
+  <div class="note">
+    <strong>Our own server</strong> works the same way as any other: see the <a href="geyser.html">Geyser page</a> for steps.
+  </div>
+
+  <h2>First: which kind of server is it?</h2>
+  <p>A Bedrock player can only join a server that accepts Bedrock connections. That means either a native <strong>Bedrock server</strong>, or a <strong>Java server running Geyser</strong> (like this one). A plain Java server without Geyser can't be joined from Bedrock. Note that the address and port will be different for Java and Bedrock Editions.</p>
+
+  <h2>Phones, Tablets, and PC</h2>
+  <p>This is the easiest method, and works on Android, iOS/iPadOS and Windows Bedrock (and Linux if you have the <em><strong>sauce</strong></em>).</p>
+  <ol>
+    <li>Open Minecraft, choose <strong>Play</strong>, then the <strong>Servers</strong> tab.</li>
+    <li>Scroll down and choose <strong>Add Server</strong>.</li>
+    <li>Enter a name, the server's Bedrock address, and the port.</li>
+    <li>Save, then select the server and join. You only have to add it once.</li>
+  </ol>
+
+  <h2>Consoles: Xbox, PlayStation and Switch</h2>
+  <p>Consoles have no Add Server button, so you need a workaround. These are third-party tools, not made by Mojang, and can stop working after game updates.</p>
+
+  <h3>Option A: Join through a friend</h3>
+  <ol>
+    <li>Have a friend on a phone or PC join the server using Add Server (I can help with this if I'm available).</li>
+    <li>Make sure you and that friend are on each other's Minecraft friends list.</li>
+    <li>On your console, open <strong>Play</strong>, then the <strong>Friends</strong> tab, and join their session.</li>
+  </ol>
+
+  <h3>Option B: BedrockConnect</h3>
+  <p><a href="https://github.com/Pugmatt/BedrockConnect">BedrockConnect</a> gives consoles a server list they can type addresses into.</p>
+  <ul>
+    <li><strong>DNS method:</strong> change your console's DNS settings to the BedrockConnect address listed on the project page, then open a featured server in the Servers tab. A BedrockConnect menu appears where you can add any server.</li>
+    <li><strong>Add Friend method:</strong> the project also describes a way to reach BedrockConnect by adding a special friend account, which avoids changing DNS.</li>
+  </ul>
+  <div class="warn">
+    <strong>Be careful with DNS:</strong> changing DNS sends part of your console's network traffic through someone else's server. Only use addresses published by the official BedrockConnect project, and change them back when you're done. Don't enter your Microsoft password anywhere other than the normal sign-in screen.
+  </div>
+
+  <h3>Option C: Phone broadcast apps</h3>
+  <p>Some phone apps can advertise a server to your console so it appears in the Friends tab. The phone must stay on the same network and open while you join. These apps change frequently, so check recent reviews before installing.</p>
+
+  <h2>Troubleshooting</h2>
+  <table>
+    <tr><th>Problem</th><th>What to try</th></tr>
+    <tr><td>Version mismatch</td><td>Bedrock updates itself, and the server may be behind or ahead. Check the server's announcements.</td></tr>
+    <tr><td>Can't connect</td><td>Double-check the address, port, and that you chose a Bedrock address (not a Java one).</td></tr>
+    <tr><td>Works on phone, not console</td><td>The server is fine; the console workaround is the problem. Try a different option above.</td></tr>
+    <tr><td>Signed in as the wrong account</td><td>Make sure you're signed into the Microsoft/Xbox account you want to play with.</td></tr>
+  </table>
+
+  <p>
+    Please report any problems to me on Discord. I can only help with the server itself, not third-party tools or console issues, but I can probably walk you through some things.<br>
+    I'm also planning on updating this page with specifics for each console method, but that obviously isn't done yet.
+  </p>
+</main>
+<footer>Last updated November 2026.</footer>
+</body>
+</html>
